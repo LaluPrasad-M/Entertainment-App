@@ -1,0 +1,28 @@
+
+.main-body {
+  text-align: center;
+}
+.search{
+    width: 80%;
+    text-align:  center;
+    height: 2rem;
+}
+.like{
+    color:#f22;
+    margin:15px;
+}
+.titleDiv{
+    width: max-content;
+}
+.title{
+    color: #31f;
+    margin:15px;
+}
+.subtitle{
+    color:#75f;
+    margin:15px;
+}
+.song{
+    display: flex;
+    justify-content: space-between;
+}
