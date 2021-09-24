@@ -1,28 +1,65 @@
-
+* {
+  align-items: center;
+}
 .main-body {
   text-align: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
-.search{
-    width: 80%;
-    text-align:  center;
-    height: 2rem;
+.search {
+  margin-top: 1%;
+  width: 80%;
+  text-align: center;
+  height: 2rem;
+  margin-bottom: 1%;
+  overflow: hidden;
+  background-color: #eee;
 }
-.like{
-    color:#f22;
-    margin:15px;
+.like {
+  background-color: #ccc;
+  color: rgb(150, 29, 29);
+  margin: 15px;
+  border-radius: 20%;
 }
-.titleDiv{
-    width: max-content;
+.btn {
+  background-color: #ccc;
+  border-radius: 5px;
+  padding: 5px;
 }
-.title{
-    color: #31f;
-    margin:15px;
+.titleDiv {
+  width: max-content;
 }
-.subtitle{
-    color:#75f;
-    margin:15px;
+.title {
+  color: #ccc;
+  margin: 15px;
 }
-.song{
-    display: flex;
-    justify-content: space-between;
+.subtitle {
+  color: #999;
+  margin: 15px;
+}
+.song {
+  background-color: #333;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+audio {
+  width: 500px;
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+}
+
+.divSong {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  width: 30%;
+  text-align: center;
+  height: 1.5rem;
+  margin: 2% 4%;
+
+  background-color: #eee;
 }

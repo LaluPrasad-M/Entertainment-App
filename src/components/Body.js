@@ -111,9 +111,7 @@ const Body = () => {
   };
 
   const isliked = (id) => {
-    var likingData = like.filter((eachLike) => 
-      eachLike.id === id
-    );
+    var likingData = like.filter((eachLike) => eachLike.id === id);
     if (likingData.length === 0) {
       return false;
     } else {
@@ -148,20 +146,27 @@ const Body = () => {
       {data.map((eachData, index) => (
         <div key={index}>
           <div className="song">
-            <button className="like" onClick={() => likeHandler(eachData.id)}>
-              {eachData.like}
-              {isliked(eachData.id) ? (
-                <FcLike style={{ fontSize: "1.5rem" }} />
-              ) : (
-                <FcLikePlaceholder style={{ fontSize: "1.5rem" }} />
-              )}
-            </button>
-            <div className="titleDiv">
-              <h3 className="title">{eachData.title}</h3>
-              <h5 className="subtitle">{eachData.subtitle}</h5>
+            <div className="divSong">
+              <button className="like" onClick={() => likeHandler(eachData.id)}>
+                <div style={{ color: "black" }}> {eachData.like}</div>
+                {isliked(eachData.id) ? (
+                  <FcLike style={{ fontSize: "1.5rem" }} />
+                ) : (
+                  <FcLikePlaceholder style={{ fontSize: "1.5rem" }} />
+                )}
+              </button>
+              <div className="titleDiv">
+                <h3 className="title">{eachData.title}</h3>
+                <h5 className="subtitle">{eachData.subtitle}</h5>
+              </div>
+              <audio
+                controls
+                src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"
+                type="audio/mp3"
+              />
             </div>
-            <audio controls source src="horse.mp3" type="audio/mpeg" />
-            <button className="like" onClick={() => deleteHandler(eachData.id)}>
+
+            <button className="btn" onClick={() => deleteHandler(eachData.id)}>
               delete
             </button>
           </div>
@@ -172,7 +177,7 @@ const Body = () => {
       {addnewSong ? (
         <div>
           <div>
-            <button className="addSong" onClick={() => toggleAddNewSong()}>
+            <button className="btn" onClick={() => toggleAddNewSong()}>
               Close
             </button>
           </div>
@@ -188,14 +193,14 @@ const Body = () => {
             value={subtitle}
             onChange={(value) => subtitleInputHandler(value.target.value)}
           />
-          <button className="addSong" onClick={() => addSongHandler()}>
+          <button className="btn" onClick={() => addSongHandler()}>
             Submit
           </button>
         </div>
       ) : (
         <div>
           {" "}
-          <button className="addSong" onClick={() => toggleAddNewSong()}>
+          <button className="btn" onClick={() => toggleAddNewSong()}>
             Add New Song
           </button>
         </div>
