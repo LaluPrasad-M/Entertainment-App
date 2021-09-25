@@ -1,4 +1,4 @@
-import { MdExitToApp, MdMusicNote, MdLibraryMusic } from "react-icons/md";
+import { MdExitToApp, MdLibraryMusic } from "react-icons/md";
 import React from "react";
 import "./Header.css";
 
